@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g fill="none" stroke="#00E5FF" stroke-opacity="0.2" stroke-width="3">
+    <circle cx="512" cy="512" r="300"/>
+    <circle cx="512" cy="512" r="240"/>
+    <circle cx="512" cy="512" r="180"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round" stroke-width="14" filter="url(#glow)">
+    <circle cx="512" cy="512" r="300" stroke="#00E5FF" stroke-dasharray="500 1385" transform="rotate(-70 512 512)"/>
+    <circle cx="512" cy="512" r="240" stroke="#FF2D95" stroke-dasharray="400 1108" transform="rotate(100 512 512)"/>
+    <circle cx="512" cy="512" r="180" stroke="#39FF14" stroke-dasharray="290 841" transform="rotate(200 512 512)"/>
+  </g>
+
+  <g stroke="#FFFFFF" stroke-linecap="round" filter="url(#glow)">
+    <line x1="512" y1="512" x2="512" y2="390" stroke-width="20"/>
+    <line x1="512" y1="512" x2="608" y2="562" stroke-width="20"/>
+  </g>
+  <circle cx="512" cy="512" r="22" fill="#00E5FF" filter="url(#glow)"/>
+</svg>
